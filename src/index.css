@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.bgColor{
+    border-radius: 2px;
+    background: var(--grad, linear-gradient(171deg, rgba(0, 240, 255, 0.80) 8.85%, rgba(83, 118, 255, 0.80) 42.71%, rgba(0, 12, 182, 0.80) 100%));
+    box-shadow: 7px 0px 106px 0px rgba(0, 0, 0, 0.10);
+}
+.headerStyle{
+    box-shadow: 0px 1.8761134147644043px 36px 0px rgba(9, 30, 66, 0.05);
+
+}
