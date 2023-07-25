@@ -90,7 +90,7 @@ export default function Navbar() {
           </NavLink>
           <NavLink
             style={navLinkStyle}
-            to="/"
+            to="/profile"
             className="p-3  px-10  rounded-[8px]"
           >
             <div className="flex justify-start items-center w-full gap-5">

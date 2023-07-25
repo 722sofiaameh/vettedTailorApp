@@ -14,7 +14,8 @@ export default {
         textGray:'var(--gray-2, #4F4F4F)',
         blue:'#000CB6',
         gray:'#F9F9F9',
-        darkGray:'#212135'
+        darkGray:'#212135',
+        faintGray:' var(--gray-3, #828282)'
         
       }
     },
