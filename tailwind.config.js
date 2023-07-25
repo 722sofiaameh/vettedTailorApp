@@ -15,8 +15,9 @@ export default {
         blue:'#000CB6',
         gray:'#F9F9F9',
         darkGray:'#212135',
-        faintGray:' var(--gray-3, #828282)'
-        
+        faintGray:' var(--gray-3, #828282)',
+        pink:'#B7076B',
+        Gray_:'#5E5E5E'
       }
     },
   },
