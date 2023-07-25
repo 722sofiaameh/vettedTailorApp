@@ -1,20 +1,23 @@
 import React from "react";
-import mainImg from "../assets/images/yellowMan.png";
-import tag from "../assets/images/tag.png";
+import mainImg from "../src/assets/images/yellowMan.png";
+import bank from "../src/assets/images/bank.png";
+import bankNum from "../src/assets/images/bankNum.png";
+import user from "../src/assets/images/user.png";
 
 export default function Profile() {
   return (
-    <div className="bg-white w-[80%]  mx-auto mt-20">
+    <div className="bg-white w-[80%]  mx-auto mt-10">
+   
       <div className="text-center pt-8">
         <h1 className="text-darkGray text-[24px] font-bold">
           Vetted Tailor Application
         </h1>
         <p className="text-darkGray text-[14px] font-light  leading-[20px]">
-          One step closer to the goal! please provide us with your Bank details
+          One step closer to the goal! please provide us with your Bank details<br></br>
           with which you will be recieving payment..
         </p>
       </div>
-      <div className="flex justify-around items-center pt-14 pb-14">
+      <div className="flex justify-around items-center pt-12 pb-14">
         <div className="">
           <div className="bg-white drop-shadow-xl mb-8	w-24 p-2 rounded-2xl">
             <img src={mainImg} className="" />
@@ -89,7 +92,7 @@ export default function Profile() {
           </div>
           <div>
             <label className='relative block text-Gray_ mt-4'>Bank Name :
-            <img src={tag} className='absolute pt-2 pl-2'/>
+            <img src={bank} className='absolute pt-2 pl-2'/>
             <input
               class="placeholder:text-slate-400 block bg-white w-full border border-faintGray rounded-md py-2 pl-9 pr-3 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm"
               placeholder="Please select your bank"
@@ -100,7 +103,7 @@ export default function Profile() {
           </div>
           <div>
             <label className='relative block text-Gray_ mt-4'>Account Number :
-            <img src={tag} className='absolute pt-2 pl-2'/>
+            <img src={bankNum} className='absolute pt-2 pl-2'/>
             <input
               class="placeholder:text-slate-400 block bg-white w-full border border-faintGray rounded-md py-2 pl-9 pr-3 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm"
               placeholder="Please input your account Number"
@@ -110,10 +113,10 @@ export default function Profile() {
            
           </div><div>
             <label className='relative block text-Gray_ mt-4'>Account Name :
-            <img src={tag} className='absolute pt-2 pl-2'/>
+            <img src={user} className='absolute pt-2 pl-2'/>
             <input
               class="placeholder:text-slate-400 block bg-white w-full border border-faintGray rounded-md py-2 pl-9 pr-3 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm"
-              placeholder="Please select your bank"
+              placeholder="Please Enter Bank Name"
               type="text"
               name="search"
             /></label>

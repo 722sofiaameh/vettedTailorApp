@@ -10,7 +10,7 @@ import Logout from "../assets/images/Logout.png";
 import Fitted from "../assets/images/fitted.png";
 import edit from "../assets/images/icon.png";
 import tag from "../assets/images/tag.png";
-
+import closeFist from "../assets/images/hand_fist.png";
 export default function Navbar() {
   const navLinkStyle = ({ isActive }) => {
     return {
@@ -21,11 +21,11 @@ export default function Navbar() {
   };
   return (
     <>
-      <div className=" bgColor  flex flex-col justify-between h-screen items-center text-black text-[16px]">
+      <div className=" bgColor  flex flex-col justify-between h-screen items-center text-black text-[16px] bg-blend-multiply relative">
         <div className="flex flex-col items-start gap-4 w-full ">
           {/* <div className='flex justify-center items-start pt-4'> */}
           <div>
-            <img src={Fitted} className="w-full px-8 mt-3" />
+            <img src={Fitted} className="w-full px-8 mt-2" />
           </div>
           <div className="mx-auto p-2">
             <div className='flex justify-center items-center gap-1 mb-2'>
@@ -59,7 +59,7 @@ export default function Navbar() {
           {/* </div> */}
           <NavLink
             style={navLinkStyle}
-            to="/dashboard/overview"
+            to="/"
             className="p-3 px-10 rounded-[8px]"
           >
             <div className="flex justify-start items-center w-full gap-16 pr-6">
@@ -69,7 +69,7 @@ export default function Navbar() {
           </NavLink>
           <NavLink
             style={navLinkStyle}
-            to="/dashboard/overview"
+            to="/"
             className="p-3  px-10 rounded-[8px]"
           >
             <div className="flex justify-start items-center w-full gap-16 pr-6">
@@ -79,7 +79,7 @@ export default function Navbar() {
           </NavLink>
           <NavLink
             style={navLinkStyle}
-            to="/dashboard/overview"
+            to="/"
             className="p-3  px-10 rounded-[8px]"
           >
             <div className="flex justify-start items-center w-full gap-16 pr-6">
@@ -89,7 +89,7 @@ export default function Navbar() {
           </NavLink>
           <NavLink
             style={navLinkStyle}
-            to="/dashboard/overview"
+            to="/"
             className="p-3  px-10 rounded-[8px]"
           >
             <div className="flex justify-start items-center w-full gap-16 pr-6">
@@ -109,7 +109,7 @@ export default function Navbar() {
           </NavLink>
           <NavLink
             style={navLinkStyle}
-            to="/dashboard/overview"
+            to="/"
             className="p-3  px-10 rounded-[8px]"
           >
             <div className="flex justify-start items-center w-full gap-16 pr-6">
@@ -118,11 +118,7 @@ export default function Navbar() {
             </div>
           </NavLink>
         </div>
-        <div>
-          <Link>
-            <img src={""} alt="" className="" />
-          </Link>
-        </div>
+        <img src={closeFist} className="absolute bottom-0 left-0 w-[50%]"/>
       </div>
     </>
   );
