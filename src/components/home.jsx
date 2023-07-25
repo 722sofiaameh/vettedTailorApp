@@ -6,7 +6,7 @@ import Header from "./header";
 export default function Home() {
   return (
     <>
-      <div className="overflow-hidden h-[100vh] ">
+      <div className="overflow-hidden h-[100vh] bg-gray">
         <div className="grid grid-cols-11">
           <div className="col-span-3 min-h-screen">
             <Navbar />

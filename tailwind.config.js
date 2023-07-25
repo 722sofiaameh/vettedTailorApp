@@ -12,7 +12,9 @@ export default {
       colors:{
         bgColor:'var(--grad, linear-gradient(171deg, rgba(0, 240, 255, 0.80) 8.85%, rgba(83, 118, 255, 0.80) 42.71%, rgba(0, 12, 182, 0.80) 100%))',
         textGray:'var(--gray-2, #4F4F4F)',
-        blue:'#000CB6'
+        blue:'#000CB6',
+        gray:'#F9F9F9',
+        darkGray:'#212135'
         
       }
     },
