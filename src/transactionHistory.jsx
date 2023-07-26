@@ -87,7 +87,7 @@ export default function TransactionHistory() {
           </select>
         </div>
         <table className="table-auto rounded-xl md:w-[100%] text-darkGray ">
-          <thead className="pb-[-12]">
+          <thead className="mr-2 border-b-2 mb-2 mt-2 w-full border-gray pt-2">
             <tr className="">
               <th>
                 <input
@@ -100,7 +100,7 @@ export default function TransactionHistory() {
               <th>
                 <select
                   id="dropdown"
-                  className="border-faintGray border-2  mt-1 bg-bgColor text-darkGray w-[80%] rounded-lg pl-2 pt-2 pb-2"
+                  className="border-faintGray border-2  mt-1 bg-bgColor text-darkGray w-[80%] rounded-lg pl-2 pt-2 pb-2 mb-4"
                 >
                   <option className="text-Gray_">Transaction ID</option>
                   <option>Male</option>
@@ -110,7 +110,7 @@ export default function TransactionHistory() {
               <th>
                 <select
                   id="dropdown"
-                  className="border-faintGray border-2  mt-1 bg-bgColor text-darkGray w-[80%] rounded-lg pl-2 pt-2 pb-2"
+                  className="border-faintGray border-2  mt-1 bg-bgColor text-darkGray w-[80%] rounded-lg pl-2 pt-2 pb-2 mb-4"
                 >
                   <option className="text-Gray_">Transation Type</option>
                   <option>Male</option>
@@ -120,7 +120,7 @@ export default function TransactionHistory() {
               <th>
                 <select
                   id="dropdown"
-                  className="border-faintGray border-2  mt-1 bg-bgColor text-darkGray w-[60%] rounded-lg pl-2 pt-2 pb-2"
+                  className="border-faintGray border-2  mt-1 bg-bgColor text-darkGray w-[80%] rounded-lg pl-2 pt-2 pb-2 mb-4"
                 >
                   <option className="text-Gray_">Date</option>
                   <option>Male</option>
@@ -130,7 +130,7 @@ export default function TransactionHistory() {
               <th>
                 <select
                   id="dropdown"
-                  className="border-faintGray border-2  mt-1 bg-bgColor text-darkGray w-[80%] rounded-lg pl-2 pt-2 pb-2"
+                  className="border-faintGray border-2  mt-1 bg-bgColor text-darkGray w-[80%] rounded-lg pl-2 pt-2 pb-2 mb-4"
                 >
                   <option className="text-Gray_">Amount</option>
                   <option>Male</option>
@@ -140,7 +140,7 @@ export default function TransactionHistory() {
               <th>
                 <select
                   id="dropdown"
-                  className="border-faintGray border-2  mt-1 bg-bgColor text-darkGray w-[80%] rounded-lg pl-2 pt-2 pb-2"
+                  className="border-faintGray border-2  mt-1 bg-bgColor text-darkGray w-[80%] rounded-lg pl-2 pt-2 pb-2 mb-4"
                 >
                   <option className="text-Gray_">Payment</option>
                   <option>Male</option>
@@ -150,7 +150,7 @@ export default function TransactionHistory() {
               <th>
                 <select
                   id="dropdown"
-                  className="border-faintGray border-2  mt-1 bg-bgColor text-darkGray w-[100%] rounded-lg pl-2 pt-2 pb-2"
+                  className="border-faintGray border-2  mt-1 bg-bgColor text-darkGray w-[100%] rounded-lg pl-2 pt-2 pb-2 mb-4"
                 >
                   <option className="text-Gray_">Status</option>
                   <option>Male</option>
@@ -160,66 +160,119 @@ export default function TransactionHistory() {
             </tr>
           </thead>
           <tbody className="">
-            <tr className="mr-2 ">
+            <tr className="mr-2 border-b-2 mb-2 mt-2 w-full border-gray">
               <td>
                 <input
                   type="checkbox"
                   name=""
                   id=""
-                  className="ml-2 w-4 h-4 mt-4"
+                  className="ml-2 w-4 h-4"
                 />
               </td>
-              <td className="text-center pt-4">#790841</td>
-              <td className="text-center pt-4">Receive Token</td>
-              <td className="text-center pt-4">12-Jun- 2021</td>
-              <td className="text-center pt-4">5 Tokens</td>
-              <td className="text-center pt-4">Token Wallet</td>
-              <td className="bg-green-200 rounded-xl text-center text-green-400 text-sm ">
-                Successful
+              <td className="text-center py-  ">#790841</td>
+              <td className="text-center py-">Receive Token</td>
+              <td className="text-center py-">12-Jun- 2021</td>
+              <td className="text-center py-">5 Tokens</td>
+              <td className="text-center py-">Token Wallet</td>
+              <td className="text-center py-4">
+                <a href="/"  className="bg-green-200 rounded-2xl text-center py-2 p-2 text-green-400 ">Successful</a>
               </td>
               <td><img src={more} alt="" /></td>
             </tr>
 
-            <tr>
+            <tr className="mr-2 border-b-2 mb-2 mt-2 w-full border-gray">
               <td>
                 <input
                   type="checkbox"
                   name=""
                   id=""
-                  className="ml-2 w-4 h-4 mt-4"
+                  className="ml-2 w-4 h-4"
                 />
               </td>
-              <td className="text-center pt-4">#790841</td>
-              <td className="text-center pt-4">Transfer Token</td>
-              <td className="text-center pt-4">12-Jun- 2021</td>
-              <td className="text-center pt-4">20 Tokens</td>
-              <td className="text-center pt-4">Token Wallet</td>
-              <td className="bg-green-200 rounded-2xl text-center text-green-400">
-                Successful
+              <td className="text-center py-">#790841</td>
+              <td className="text-center py-">Transfer Token</td>
+              <td className="text-center py-">12-Jun- 2021</td>
+              <td className="text-center py-">20 Tokens</td>
+              <td className="text-center py-">Token Wallet</td>
+              <td className="text-center py-4">
+                <a href="/"  className="bg-green-200 rounded-2xl text-center py-2 p-2 text-green-400 ">Successful</a>
               </td>
               <td><img src={more} alt="" /></td>
             </tr>
-            <tr className="">
+            <tr className="mx-3">
               <td>
                 <input
                   type="checkbox"
                   name=""
                   id=""
-                  className="ml-2 w-4 h-4 mt-4"
+                  className="ml-2 w-4 h-4"
                 />
               </td>
-              <td className="text-center pt-4">#790841</td>
-              <td className="text-center pt-4">Product Type</td>
-              <td className="text-center pt-4">12-Jun- 2021</td>
-              <td className="text-center pt-4">#30,000</td>
-              <td className="text-center pt-4">Card Payment</td>
-              <td className="bg-green-200 rounded-2xl text-center text-green-400 ">
-                Successful
+              <td className="text-center py-4 ">#790841</td>
+              <td className="text-center py-4 ">Product Type</td>
+              <td className="text-center py-4 ">12-Jun- 2021</td>
+              <td className="text-center py-4 ">#30,000</td>
+              <td className="text-center py-4 ">Card Payment</td>
+              <td className="text-center py-4">
+                <a href="/"  className="bg-green-200 rounded-2xl text-center py-2 p-2 text-green-400 ">Successful</a>
               </td>
               <td><img src={more} alt="" /></td>
             </tr>
           </tbody>
         </table>
+{/* 
+        <div className="flex justify-center px-4">
+                            <table
+                                className="text-[12px] text-left text-gray-500 dark:text-gray-400 mb-5 overflow-x-auto"
+                            >
+                                <thead className="text-[16px] text-black font-[600] bg-gray-50">
+                                    <tr>
+                                        <th scope="col" className="px-6" >
+                                            Name
+                                        </th>
+                                        <th scope="col" className="px-6" >
+                                            Email
+                                        </th>
+                                        <th scope="col" className="px-6" >
+                                            Phone
+                                        </th>
+                                        <th scope="col" className="px-6" >
+                                            Service
+                                        </th>
+                                        <th scope="col" className="px-6" >
+                                            Amount
+                                        </th>
+                                        <th scope="col" className="px-6" >
+                                            Ref No. 
+                                        </th>
+                                        <th scope="col" className="px-6" >
+                                            Date
+                                        </th>
+                                        <th scope="col" className="px-6" >
+                                            Status
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    
+                                        <tr className="text-black border-[2px]">
+                                            <td className="px-4"></td>
+                                            <td className="px-4"></td>
+                                            <td className="px-4"></td>
+                                            <td className="px-4 text-[10px]">
+                                                
+                                            </td>
+                                            <td className="px-4"></td>
+                                            <td className="px-4"></td>
+                                            <td className="px-4"></td>
+                                            <td className="px-4">  </td>
+                                        </tr>
+                                </tbody>
+                            </table>
+
+
+
+                        </div> */}
       </div>
     </>
   );
