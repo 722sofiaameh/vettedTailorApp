@@ -5,6 +5,10 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
     theme: {
+      fontFamily:{
+'Kotori':'Kotori Rose',
+Karla :'Karla'
+      },
     extend: {
       boxShadow: {
         '3xl':'7px 0px 106px 0px rgba(0, 0, 0, 0.10)',
@@ -18,7 +22,7 @@ export default {
         faintGray:' var(--gray-3, #828282)',
         pink:'#B7076B',
         Gray_:'#5E5E5E'
-      }
+      },
     },
   },
   plugins: [],

@@ -10,8 +10,12 @@ import Logout from "../assets/images/Logout.png";
 import Fitted from "../assets/images/fitted.png";
 import edit from "../assets/images/icon.png";
 import tag from "../assets/images/tag.png";
+import close from "../assets/images/close.png";
+import hamburger from "../assets/images/hamburger.png";
+
 import closeFist from "../assets/images/hand_fist.png";
 export default function Navbar() {
+  const [navbar, setNavbar] = useState(false);
   const navLinkStyle = ({ isActive }) => {
     return {
       color: isActive ? "#000" : "white",
@@ -21,16 +25,39 @@ export default function Navbar() {
   };
   return (
     <>
-      <div className=" bgColor  flex flex-col justify-between h-screen items-center text-black text-[16px] bg-blend-multiply relative">
+      <div className="bgColor  flex flex-col justify-between h-screen items-center text-black text-[16px] bg-blend-multiply relative ">
         <div className="flex flex-col items-start gap-4 w-full ">
-          {/* <div className='flex justify-center items-start pt-4'> */}
+        <div className="md:hidden ">
+                <button
+                  className="p-2  rounded-md outline-none  "
+                  onClick={() => setNavbar(navbar)}
+                >
+                  {navbar ? (
+                    <img
+                      src={close}
+                      width={30}
+                      height={30}
+                      alt="logo"
+                      className="focus:border-none active:border-none"
+                    />
+                  ) : (
+                    <img
+                      src={hamburger}
+                      width={30}
+                      height={30}
+                      alt="logo"
+                      className="focus:border-none active:border-none"
+                    />
+                  )}
+                </button>
+              </div>
           <div>
             <img src={Fitted} className="w-full px-8 mt-2" />
           </div>
           <div className="mx-auto p-2">
             <div className='flex justify-center items-center gap-1 mb-2'>
 
-                <div className="bg-blue w-2 h-2 flex justify-center items-center rounded-full p-6 text-white font-bold">
+                <div className="bg-blue w-2 h-2 flex justify-center items-center rounded-full p-6 text-white font-bold drop-shadow-xl">
                   SA
                 </div>
             <div className=" w-8 h-8 -mb-8"><img src={edit}/></div>
@@ -49,7 +76,7 @@ export default function Navbar() {
 
               <select
                 id="dropdown"
-                className="border-white border-2 rounded-lg mt-1 bg-bgColor p-2 text-white"
+                className="border-white font-Poppins border-2 rounded-lg mt-1 bg-bgColor p-2 text-white"
               >
                 <option value="apple">Application Pending</option>
                 <option value="banana">Non-Vetted Traitor</option>
@@ -59,8 +86,9 @@ export default function Navbar() {
           {/* </div> */}
           <NavLink
             style={navLinkStyle}
-            to="/"
-            className="p-3 px-10 rounded-[8px]"
+            to="/measurements"
+            className="p-3 px-10 rounded-[8px] font-Karla-Regular "
+            onClick={() => setNavbar(!navbar)}
           >
             <div className="flex justify-start items-center w-full gap-16 pr-6">
               <img src={Measurement} alt="" />
@@ -69,8 +97,9 @@ export default function Navbar() {
           </NavLink>
           <NavLink
             style={navLinkStyle}
-            to="/"
-            className="p-3  px-10 rounded-[8px]"
+            to="/transaction_History"
+            className="p-3  px-10 rounded-[8px] font-Karla-Regular "
+            onClick={() => setNavbar(!navbar)}
           >
             <div className="flex justify-start items-center w-full gap-16 pr-6">
               <img src={Orders} alt="" />
@@ -79,8 +108,9 @@ export default function Navbar() {
           </NavLink>
           <NavLink
             style={navLinkStyle}
-            to="/"
+            to="/products"
             className="p-3  px-10 rounded-[8px]"
+            onClick={() => setNavbar(!navbar)}
           >
             <div className="flex justify-start items-center w-full gap-16 pr-6">
               <img src={Products} alt="" />
@@ -89,8 +119,8 @@ export default function Navbar() {
           </NavLink>
           <NavLink
             style={navLinkStyle}
-            to="/"
-            className="p-3  px-10 rounded-[8px]"
+            to="/customers"
+            className="p-3  px-10 rounded-[8px] font-Karla-Regular " 
           >
             <div className="flex justify-start items-center w-full gap-16 pr-6">
               <img src={Customers} alt="" />
@@ -100,7 +130,8 @@ export default function Navbar() {
           <NavLink
             style={navLinkStyle}
             to="/profile"
-            className="p-3  px-10  rounded-[8px]"
+            className="p-3  px-10  rounded-[8px] font-Karla-Regular "
+            onClick={() => setNavbar(!navbar)}
           >
             <div className="flex justify-start items-center w-full gap-16 pr-6">
               <img src={User} alt="" />
@@ -109,8 +140,9 @@ export default function Navbar() {
           </NavLink>
           <NavLink
             style={navLinkStyle}
-            to="/"
-            className="p-3  px-10 rounded-[8px]"
+            to="/success"
+            className="p-3  px-10 rounded-[8px] font-Karla-Regular "
+            onClick={() => setNavbar(!navbar)}
           >
             <div className="flex justify-start items-center w-full gap-16 pr-6">
               <img src={Logout} alt="" />
@@ -118,8 +150,9 @@ export default function Navbar() {
             </div>
           </NavLink>
         </div>
-        <img src={closeFist} className="absolute bottom-0 left-0 w-[50%]"/>
+        <img src={closeFist} className="absolute bottom-0 left-0 w-[30%]"/>
       </div>
+      
     </>
   );
 }

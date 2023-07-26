@@ -4,10 +4,10 @@ import Notification from '../assets/images/Notification.png'
 
 export default function Header() {
   return (
-    <div className=' headerStyle bg--white  h-20 text-white'>
+    <div className='w-full absolute md:w-[100vw] headerStyle bg-white  h-20 text-white'>
       <div className='flex pt-4 justify-between pl-10 pr-10 items-center'>
         <div className='flex justify-between items-center gap-10'>
-          <img src={Back}/>
+          <a href="/profile"><img src={Back}/></a>
           <h1 className='text-black font-medium text-[24px] '>Vetted Tailor Application</h1>
         </div>
        <div className='flex justify-between items-center gap-4 relative'>
