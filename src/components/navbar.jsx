@@ -129,7 +129,7 @@ export default function Navbar() {
           </NavLink>
           <NavLink
             style={navLinkStyle}
-            to="/profile"
+            to="/"
             className="p-3  px-10  rounded-[8px] font-Karla-Regular "
             onClick={() => setNavbar(!navbar)}
           >
