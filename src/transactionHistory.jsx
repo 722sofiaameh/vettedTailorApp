@@ -66,9 +66,9 @@ export default function TransactionHistory() {
           </div>
         </div>
       </div>
-      <div className=" md:w-[80%] bg-white mx-auto rounded-xl p-10">
+      <div className=" md:w-[80%] bg-white mx-auto rounded-xl p-8">
         <div className="flex justify-around pt-2 pb-4">
-          <label className="relative block text-Gray_ mt-4">
+          <label className="relative block text-Gray_ mt-4 w-[60%]">
             <img src={search} alt="img" className="absolute pt-2 pl-2 " />
             <input
               className="placeholder:text-slate-400 block bg-white w-[100%] ml-10 border border-faintGray rounded-md py-2 pl-9 pr-3 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm "
@@ -79,15 +79,15 @@ export default function TransactionHistory() {
           </label>
           <select
             id="dropdown"
-            className="border-faintGray border-2  mt-1 bg-bgColor text-darkGray  rounded-lg pl-2"
+            className="border-faintGray border-2  mt-1 bg-bgColor text-darkGray   rounded-lg pl-2"
           >
             <option className="text-Gray_">Actions</option>
             <option>Male</option>
             <option>Female</option>
           </select>
         </div>
-        <table className="table-auto rounded-xl md:w-[100%] ">
-          <thead>
+        <table className="table-auto rounded-xl md:w-[100%] text-darkGray ">
+          <thead className="pb-[-12]">
             <tr className="">
               <th>
                 <input
@@ -199,7 +199,7 @@ export default function TransactionHistory() {
               </td>
               <td><img src={more} alt="" /></td>
             </tr>
-            <tr>
+            <tr className="">
               <td>
                 <input
                   type="checkbox"
@@ -213,7 +213,7 @@ export default function TransactionHistory() {
               <td className="text-center pt-4">12-Jun- 2021</td>
               <td className="text-center pt-4">#30,000</td>
               <td className="text-center pt-4">Card Payment</td>
-              <td className="bg-green-200 rounded-2xl text-center text-green-400 w-20 h-2">
+              <td className="bg-green-200 rounded-2xl text-center text-green-400 ">
                 Successful
               </td>
               <td><img src={more} alt="" /></td>
