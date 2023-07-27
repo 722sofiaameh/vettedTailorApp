@@ -137,7 +137,7 @@ console.log(response);
             </div>
           </div>
         </div>
-        <div className='my-32 md:my-0 p-2 md:bg-none md:drop-shadow-none bg-white box rounded-xl'>
+        <div className='my-32 md:my-0 p-2 md:bg-none md:drop-shadow-none bg-white rounded-xl'>
           <div className="flex gap-6 ">
             <div className="flex flex-col">
               <label className="text-Gray_">Gender You Sew For:</label>
