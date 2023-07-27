@@ -18,8 +18,8 @@ export default function TransactionHistory() {
   return (
     <>
       <div className="">
-        <div className="history font-Kotori  bg-grey-800 w-[85%] h-32  mx-auto mt-32"></div>
-        <div className="relative bottom-[120px] h-40   drop-shadow-xl  bg-white  w-[80%]  mx-auto card ">
+        <div className="history static font-Kotori  bg-grey-800 w-[85%] h-32  mx-auto mt-32"></div>
+        <div className="relative bottom-[120px] h-40     bg-black  w-[80%]  mx-auto card ">
           <div className="flex justify-end m-4">
             <img src={edit} alt="img" className="w-4 h-4" />
           </div>

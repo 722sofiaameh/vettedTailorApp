@@ -11,7 +11,7 @@ export default function Header() {
           <h1 className='text-black font-medium text-[24px] font-Karla'>Vetted Tailor Application</h1>
         </div>
        <div className='flex justify-between items-center gap-4 relative'>
-        <div className='bg-orange-500  w-1 h-1 flex justify-center items-center rounded-full p-2 text-white font-medium absolute top-px left-1.5'>3</div>
+        <div className='bg-orange-500  w-1 h-1 flex justify-center items-center rounded-full p-2 text-xs text-white font-medium absolute top-px left-1.5'>3</div>
         <img src={Notification} alt='img'/>
         
         <div className="bg-blue font-Karla w-2 h-2 flex justify-center items-center rounded-full p-4 text-white font-bold">
