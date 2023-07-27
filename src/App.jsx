@@ -20,8 +20,9 @@ function App() {
           <Route path="/" element={<Home />}>
             <Route path="/" element={<Profile />} />
             <Route path="/success" element={<Success />} />
-            <Route path="/transaction_History/table" element={<TransactionHistory />} />
+            <Route path="/transaction_History" element={<TransactionHistory />} >
             <Route path="/transaction_History/table" element={<Table />} />
+            </Route>
             <Route path="/measurements" element={<Measurements />} />
             <Route path="/logout" element={<LogOut />} />
             <Route path="customers" element={<Customers />} />

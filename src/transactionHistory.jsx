@@ -5,7 +5,7 @@ import message from "../src/assets/images/message.png";
 import edit from "../src/assets/images/editt.png";
 import search from "../src/assets/images/Search.png";
 import more from "../src/assets/images/More.png";
-import { NavLink, Link } from "react-router-dom";
+import { NavLink, Link,Outlet } from "react-router-dom";
 import Table from "./table";
 
 export default function TransactionHistory() {
@@ -18,8 +18,8 @@ export default function TransactionHistory() {
   return (
     <>
       <div className="">
-        <div className="history font-Kotori relative bg-grey-800 w-[85%] h-32  mx-auto mt-32"></div>
-        <div className=" relative bottom-[120px] h-40   drop-shadow-xl  bg-white  w-[80%]  mx-auto card ">
+        <div className="history font-Kotori  bg-grey-800 w-[85%] h-32  mx-auto mt-32"></div>
+        <div className="relative bottom-[120px] h-40   drop-shadow-xl  bg-white  w-[80%]  mx-auto card ">
           <div className="flex justify-end m-4">
             <img src={edit} alt="img" className="w-4 h-4" />
           </div>
@@ -74,7 +74,7 @@ export default function TransactionHistory() {
           </div>
         </div>
       </div>
-      <div className="flex gap-20 items-center justify-center">
+      <div className="flex  gap-20 items-center justify-center">
         <NavLink style={navLinkStyle} 
         to="/transaction_History/table"
         className="font-Karla text-[24px] font-normal text-textGray">
@@ -94,6 +94,7 @@ export default function TransactionHistory() {
         <p>Account Settings</p>
         </NavLink>
       </div>
+      <Outlet/>
     </>
   );
 }

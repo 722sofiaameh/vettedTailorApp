@@ -4,7 +4,7 @@ import more from "../src/assets/images/More.png";
 export default function Table() {
   return (
     <div>
-       <div className=" md:w-[80%] bg-white mx-auto rounded-xl p-8">
+       <div className=" md:w-[80%] md:mt-8 md:mb-8  bg-white mx-auto rounded-xl p-8">
             <div className="flex justify-between items-center pt-2 pb-4">
               <label className="relative block text-Gray_ mt-4 w-[60%]">
                 {/* <img src={search} alt="img" className="absolute pt-2 pl-2 " /> */}
