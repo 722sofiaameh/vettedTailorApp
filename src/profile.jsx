@@ -82,7 +82,7 @@ console.log(response);
         </p>
       </div>
       <div className="flex font-Karla flex-col md:flex-row  justify-around items-center pt-12 pb-14">
-        <div className="z-20 bg-white p-8 md:p-0 drop-shadow-xl rounded-xl">
+        <div className="z-20 bg-white p-8 md:p-0 drop-shadow-xl md:drop-shadow-none rounded-xl">
           <div className=" drop-shadow-xl mb-8	w-28 p-2 rounded-2xl">
             <img src={mainImg} className="" />
           </div>

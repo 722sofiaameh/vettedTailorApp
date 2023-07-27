@@ -11,7 +11,7 @@ import tag from "../assets/images/tag.png";
 import close from "../assets/images/close.png";
 import back from "../assets/images/back.png";
 import closeFist from "../assets/images/hand_fist.png";
-
+import { useState } from "react";
 import hamburger from "../assets/images/hamburger.png";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { Disclosure } from "@headlessui/react";
@@ -30,6 +30,7 @@ import { BiMessageSquareDots } from "react-icons/bi";
 import React from "react";
 
 export default function Navbar() {
+  // const [navbar,setNavbar] = useState()
   const navLinkStyle = ({ isActive }) => {
     return {
       color: isActive ? "#000" : "white",
@@ -94,7 +95,7 @@ export default function Navbar() {
 
               <NavLink
                 style={navLinkStyle}
-                to="/measurements"
+                to="/success"
                 className="p-3 px-10 rounded-[8px] font-Karla "
                 
               >
@@ -148,7 +149,7 @@ export default function Navbar() {
               </NavLink>
               <NavLink
                 style={navLinkStyle}
-                to="/success"
+                to="/logout"
                 className="p-3  px-10 rounded-[8px] font-Karla "
                 
               >
