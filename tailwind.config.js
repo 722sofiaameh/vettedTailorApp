@@ -21,7 +21,8 @@ Karla :'Karla'
         darkGray:'#212135',
         faintGray:' var(--gray-3, #828282)',
         pink:'#B7076B',
-        Gray_:'#5E5E5E'
+        Gray_:'#5E5E5E',
+        red:'#D90000'
       },
     },
   },

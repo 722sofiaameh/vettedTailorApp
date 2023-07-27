@@ -67,9 +67,14 @@ export default function TransactionHistory() {
         </div>
       </div>
       <div className=" md:w-[80%] bg-white mx-auto rounded-xl p-8">
-        <div className="flex justify-around pt-2 pb-4">
+        <div className="flex justify-between items-center pt-2 pb-4">
           <label className="relative block text-Gray_ mt-4 w-[60%]">
-            <img src={search} alt="img" className="absolute pt-2 pl-2 " />
+            {/* <img src={search} alt="img" className="absolute pt-2 pl-2 " /> */}
+            <span className="sr-only">Search</span>
+  <span className="absolute inset-y-0 left-0 flex items-center pl-2">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="search"><g data-name="Layer 2"><path d="m20.71 19.29-3.4-3.39A7.92 7.92 0 0 0 19 11a8 8 0 1 0-8 8 7.92 7.92 0 0 0 4.9-1.69l3.39 3.4a1 1 0 0 0 1.42 0 1 1 0 0 0 0-1.42zM5 11a6 6 0 1 1 6 6 6 6 0 0 1-6-6z" data-name="search"></path></g></svg>
+  </span>
+  
             <input
               className="placeholder:text-slate-400 block bg-white w-[100%] ml-10 border border-faintGray rounded-md py-2 pl-9 pr-3 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm "
               placeholder="Search Order..."
@@ -79,7 +84,7 @@ export default function TransactionHistory() {
           </label>
           <select
             id="dropdown"
-            className="border-faintGray border-2  mt-1 bg-bgColor text-darkGray   rounded-lg pl-2"
+            className="border-faintGray border-2  mt-1 bg-bgColor text-darkGray  h-8 rounded-lg pl-2"
           >
             <option className="text-Gray_">Actions</option>
             <option>Male</option>

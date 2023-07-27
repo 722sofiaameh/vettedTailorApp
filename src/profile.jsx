@@ -4,7 +4,7 @@ import mainImg from "../src/assets/images/yellowMan.png";
 import bank from "../src/assets/images/bank.png";
 import number from "../src/assets/images/bankNum.png";
 import user from "../src/assets/images/user.png";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useNavigation } from "react-router-dom";
 
 export default function Profile() {
   const [apiData, setApiData] = useState(null);
@@ -12,45 +12,66 @@ export default function Profile() {
   const [bankNum, setBankNum] = useState("");
   const [acctName, setAcctName] = useState("");
   const [error, setError] = useState(false);
+  const [banks, setBanks] = useState([]);
+  const [resolverData, setResolverData] = useState(null);
+  const [formData, setFormData] = useState({
+    bankCode: '',
+    accountNo: '',
+    accountName: ''
+  })
 
-  // Function to fetch data from the API using Axios
-  // const fetchData = async () => {
-  //   try {
-  //     const apiUrl = 'https://fitted-portal-api.herokuapp.com/api/v1/bank/banks';
-  //     const response = await axios.get(apiUrl);
-  //     setApiData(response.data);
-  // Storing the API response in the state
-  //   } catch (error) {
-  //     console.error('Error fetching data:', error);
-  //   }
-  // };
-  // Call the fetchData function when the component mounts
-  // useEffect(() => {
-  //   fetchData();
-  // }, []);
-  const apiUrl = "https://fitted-portal-api.herokuapp.com/api/v1/bank/banks";
-  axios.get(apiUrl).then((response) => {
-    console.log(response.data);
-    console.log(response.status);
-    console.log(response.headers);
-    console.log(response.config);
-    console.log(response.statusText);
-  });
+  useEffect(() => {
+    const fetchBankList = async() => {
+      const response = await fetch('https://fitted-portal-api.herokuapp.com/api/v1/bank/banks')
 
-const handleSubmit = (response) => {
-    if (response === true && response) {
-      setApiData(response.data);
-      // useNavigate('/success')
-    } else {
-      setError(true);
+      if(!response.ok) throw new Error('Could not retrieve bank list, please try again.')
+
+      const data = await response.json();
+      await setBanks(data.data);
+    }
+
+    fetchBankList();
+  }, [])
+
+  const handleFormChange = async(event) => {
+    const { name, value } = event.target;
+    setFormData((initData) => ({
+      ...initData,
+      [name]: value,
+    }))
+  };
+
+  const handleSubmit = async() => {
+    try{
+      delete formData.accountName;
+      console.log(formData);
+      const response = await fetch('https://fitted-portal-api.herokuapp.com/api/v1/bank/resolveAccount', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      })
+console.log(response);
+      if(!response.ok) {
+        await setError(true);
+        throw new Error('Could not perform this operation, please try again.');
+      }
+      else{
+        useNavigation("/success");
+      }
+
+      const data = await response.json();
+      console.log("Data: ", data);
+      await setResolverData(data.data);
+    } catch (error) {
+      throw new Error(`Encountered an Error: ${error}`)
     }
   };
-  useEffect(() => {
-    handleSubmit();
-  }, []);
+
   return (
-    <div className="bg-white box rounded-xl w-[80%]  mx-auto md:mt-32">
-      <div className="text-center pt-8">
+    <div className="bg-white box rounded-xl md:w-[80%]  w-[100%]  mx-auto md:mt-32 mt-32 md:mx-auto">
+      <div className="md:text-center md:pt-8 md:flex md:flex-col hidden">
         <h1 className="text-darkGray text-[24px] font-bold">
           Vetted Tailor Application
         </h1>
@@ -60,9 +81,9 @@ const handleSubmit = (response) => {
           with which you will be recieving payment..
         </p>
       </div>
-      <div className="flex justify-around items-center pt-12 pb-14">
+      <div className="flex flex-col md:flex-row  justify-around items-center pt-12 pb-14">
         <div className="">
-          <div className="bg-white drop-shadow-xl mb-8	w-24 p-2 rounded-2xl">
+          <div className="bg-white drop-shadow-xl mb-8	w-28 p-2 rounded-2xl">
             <img src={mainImg} className="" />
           </div>
           <div className="w-[40%] flex flex-col justify-between">
@@ -116,8 +137,8 @@ const handleSubmit = (response) => {
             </div>
           </div>
         </div>
-        <div>
-          <div className="flex gap-6">
+        <div className='my-32 md:my-0 p-2 md:bg-none md:drop-shadow-none bg-white box rounded-xl'>
+          <div className="flex gap-6 ">
             <div className="flex flex-col">
               <label className="text-Gray_">Gender You Sew For:</label>
               <select
@@ -145,13 +166,20 @@ const handleSubmit = (response) => {
             <label className="relative block text-Gray_ mt-4">
               Bank Name :
               <img src={bank} className="absolute pt-2 pl-2" />
-              <input
+              <select
+                id="bankCode"
+                name="bankCode"
+                value={formData.bankCode}
+                onChange={handleFormChange}
                 className="placeholder:text-slate-400 block bg-white w-full border border-faintGray rounded-md py-2 pl-9 pr-3 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm"
-                value={bankName}
-                onChange={(e) => setBankName(e.target.value)}
-                placeholder="Please select your bank"
-                type="text"
-              />
+              >
+                <option value="">Select a bank</option>
+                {
+                  banks.map((bank) => (
+                    <option id={bank.id} value={bank.longcode}>{bank.name}</option>
+                  ))
+                }
+              </select>
             </label>
           </div>
           <div>
@@ -159,12 +187,12 @@ const handleSubmit = (response) => {
               Account Number :
               <img src={number} className="absolute pt-2 pl-2" />
               <input
+                type="text"
                 class="placeholder:text-slate-400 block bg-white w-full border border-faintGray rounded-md py-2 pl-9 pr-3 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm"
                 placeholder="Please input your account Number"
-                type="text"
-                name="search"
-                value={bankNum}
-                onChange={(e) => setBankNum(e.target.value)}
+                name="accountNo"
+                value={formData.accountNo}
+                onChange={handleFormChange}
               />
             </label>
           </div>
@@ -173,15 +201,16 @@ const handleSubmit = (response) => {
               Account Name :
               <img src={user} className="absolute pt-2 pl-2" />
               <input
+                type="text"
                 class="placeholder:text-slate-400 block bg-white w-full border border-faintGray rounded-md py-2 pl-9 pr-3 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm"
                 placeholder="Please Enter Bank Name"
-                type="text"
-                name="search"
-                value={acctName}
-                onChange={(e) => setAcctName(e.target.value)}
-              />
+                name="accountName"
+                value={formData.accountName}
+                onChange={handleFormChange}
+                />
             </label>
           </div>
+                { error ?  (<div className='text-red italics pt-2'>Oops,Account Details Not Found</div>) : ""}
           {/* {error && response.status === 404 ? (<div className='text-red-400 italics'>Oops,Account Details Not Found</div>) : ''} */}
           <button
             className="bg-pink p-2 rounded-xl mt-4 text-white text-[14px] italic"
@@ -189,6 +218,7 @@ const handleSubmit = (response) => {
           >
             Submit Application
           </button>
+          {console.log(formData)}
         </div>
       </div>
     </div>
