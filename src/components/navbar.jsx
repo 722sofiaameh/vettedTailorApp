@@ -41,8 +41,8 @@ export default function Navbar() {
     <div className="">
       <div className="">
         <Disclosure>
-          <Disclosure.Button className="absolute  inline-flex items-center gap-20 peer rounded-md p-6 text-gray-800 hover:bg-gray-900 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white group bg-white drop-shadow-xl w-[100%] justify-end">
-            <img src={back} alt="" className="md:hidden flex" />
+          <Disclosure.Button className="absolute md:hidden inline-flex items-center gap-20 peer rounded-md p-6 text-gray-800 hover:bg-gray-900 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white group bg-white drop-shadow-xl w-[100%] justify-end">
+            <img src={back} alt="" className="md:hidden " />
             <div className="flex gap-4">
               <p className="md:hidden flex-col flex text-black text-3xl">
                 Profile
@@ -53,12 +53,12 @@ export default function Navbar() {
               aria-hidden="true "
             />
           </Disclosure.Button>
-          <div className=" flex flex-col justify-between items-center text-black text-[16px] relative gap-6  bg-blend-multiply bgColor  h-screen bg-white z-20  top-0 -left-96 lg:left-0 lg:w-full md:w-[100%] peer-focus:left-0 peer:transition ease-out delay-150 duration-200 ">
-            <div className=" flex  flex-col items-start gap-4 w-full">
+          <div className="font-Karla flex flex-col justify-between items-center text-black text-[16px] relative gap-6  bg-blend-multiply bgColor md:h-[100vh]  h-screen bg-white z-20  top-0 -left-96 lg:left-0 lg:w-full md:w-[100%] peer-focus:left-0 peer:transition ease-out delay-150 duration-200 ">
+            <div className=" flex flex-col items-start gap-4 w-full">
               <div>
                 <img src={Fitted} className="w-full px-8 mt-2" />
               </div>
-              <div className="mx-auto p-2">
+              <div className="mx-auto p-2 hidden md:flex md:flex-col">
                 <div className="flex justify-center items-center gap-1 mb-2">
                   <div className="bg-blue w-2 h-2 flex justify-center items-center rounded-full p-6 text-white font-bold drop-shadow-xl">
                     SA
@@ -95,66 +95,66 @@ export default function Navbar() {
               <NavLink
                 style={navLinkStyle}
                 to="/measurements"
-                className="p-3 px-10 rounded-[8px] font-Karla-Regular "
-                onClick={() => setNavbar(!navbar)}
+                className="p-3 px-10 rounded-[8px] font-Karla "
+                
               >
                 <div className="flex justify-start items-center w-full gap-16 pr-6">
                   <img src={Measurement} alt="" />
-                  <p className="">Measurements</p>
+                  <p className='md:flex hidden'>Measurements</p>
                 </div>
               </NavLink>
               <NavLink
                 style={navLinkStyle}
                 to="/transaction_History"
-                className="p-3  px-10 rounded-[8px] font-Karla-Regular "
-                onClick={() => setNavbar(!navbar)}
+                className="p-3  px-10 rounded-[8px] font-Karla "
+                
               >
                 <div className="flex justify-start items-center w-full gap-16 pr-6">
                   <img src={Orders} alt="" />
-                  <p className="">Orders</p>
+                  <p className='md:flex hidden'>Orders</p>
                 </div>
               </NavLink>
               <NavLink
                 style={navLinkStyle}
                 to="/products"
                 className="p-3  px-10 rounded-[8px]"
-                onClick={() => setNavbar(!navbar)}
+                
               >
                 <div className="flex justify-start items-center w-full gap-16 pr-6">
                   <img src={Products} alt="" />
-                  <p className="">Products</p>
+                  <p className='md:flex hidden'>Products</p>
                 </div>
               </NavLink>
               <NavLink
                 style={navLinkStyle}
                 to="/customers"
-                className="p-3  px-10 rounded-[8px] font-Karla-Regular "
+                className="p-3  px-10 rounded-[8px] font-Karla "
               >
                 <div className="flex justify-start items-center w-full gap-16 pr-6">
                   <img src={Customers} alt="" />
-                  <p className="">Customers</p>
+                  <p className='md:flex hidden'>Customers</p>
                 </div>
               </NavLink>
               <NavLink
                 style={navLinkStyle}
                 to="/"
-                className="p-3  px-10  rounded-[8px] font-Karla-Regular "
-                onClick={() => setNavbar(!navbar)}
+                className="p-3  px-10  rounded-[8px] font-Karla "
+                
               >
                 <div className="flex justify-start items-center w-full gap-16 pr-6">
                   <img src={User} alt="" />
-                  <p className="">My Profile</p>
+                  <p className='md:flex hidden'>My Profile</p>
                 </div>
               </NavLink>
               <NavLink
                 style={navLinkStyle}
                 to="/success"
-                className="p-3  px-10 rounded-[8px] font-Karla-Regular "
-                onClick={() => setNavbar(!navbar)}
+                className="p-3  px-10 rounded-[8px] font-Karla "
+                
               >
                 <div className="flex justify-start items-center w-full gap-16 pr-6">
                   <img src={Logout} alt="" />
-                  <p className="">Logout</p>
+                  <p className='md:flex hidden'>Logout</p>
                 </div>
               </NavLink>
             </div>

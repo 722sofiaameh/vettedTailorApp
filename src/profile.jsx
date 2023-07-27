@@ -173,7 +173,7 @@ console.log(response);
                 onChange={handleFormChange}
                 className="placeholder:text-slate-400 block bg-white w-full border border-faintGray rounded-md py-2 pl-9 pr-3 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm"
               >
-                <option value="">Select a bank</option>
+                <option value="">Please Select a bank</option>
                 {
                   banks.map((bank) => (
                     <option id={bank.id} value={bank.longcode}>{bank.name}</option>

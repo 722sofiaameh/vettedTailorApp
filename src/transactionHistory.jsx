@@ -5,12 +5,21 @@ import message from "../src/assets/images/message.png";
 import edit from "../src/assets/images/editt.png";
 import search from "../src/assets/images/Search.png";
 import more from "../src/assets/images/More.png";
+import { NavLink, Link } from "react-router-dom";
 
 export default function TransactionHistory() {
+  const navLinkStyle = ({ isActive }) => {
+    return {
+      // color: isActive ? "#000" : "white",
+      // backgroundColor: isActive ? "white" : "",
+      // borderRadius: isActive ? "0px 50px 50px 0px" : "",
+      borderBottom: isActive ? "2px solid pink" : "",
+    };
+  };
   return (
     <>
       <div className="">
-        <div className="history relative bg-grey-800 w-[85%] h-32  mx-auto mt-32"></div>
+        <div className="history font-Kotori relative bg-grey-800 w-[85%] h-32  mx-auto mt-32"></div>
         <div className=" relative bottom-[120px] h-40   drop-shadow-xl  bg-white  w-[80%]  mx-auto card ">
           <div className="flex justify-end m-4">
             <img src={edit} alt="img" className="w-4 h-4" />
