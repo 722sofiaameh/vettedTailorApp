@@ -17,7 +17,7 @@ export default function TransactionHistory() {
   };
   return (
     <>
-      <div className="">
+      <div className="z-10">
         <div className="history static font-Kotori  bg-grey-800 w-[85%] h-32  mx-auto mt-32"></div>
         <div className="relative bottom-[120px] h-40     bg-black  w-[80%]  mx-auto card ">
           <div className="flex justify-end m-4">

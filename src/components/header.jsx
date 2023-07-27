@@ -4,7 +4,7 @@ import Notification from '../assets/images/Notification.png'
 
 export default function Header() {
   return (
-    <div className='md:w-[80vw] absolute headerStyle bg-white  h-20 text-white'>
+    <div className='md:w-[80vw] absolute headerStyle bg-white  h-20 text-white z-50'>
       <div className='flex pt-4 justify-around pl-10 pr-10 items-center'>
         <div className='flex justify-between items-center gap-10'>
           <a href="/profile"><img src={Back}/></a>

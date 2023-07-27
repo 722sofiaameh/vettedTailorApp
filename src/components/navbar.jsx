@@ -40,7 +40,7 @@ export default function Navbar() {
   return (
     <div className="">
       <div className="">
-        <Disclosure>
+        <Disclosure >
           <Disclosure.Button className="absolute md:hidden inline-flex items-center gap-20 peer rounded-md p-6 text-gray-800 hover:bg-gray-900 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white group bg-white drop-shadow-xl w-[100%] justify-end">
             <img src={back} alt="" className="md:hidden " />
             <div className="flex gap-4">
