@@ -21,7 +21,7 @@ export default function Home() {
             </div>
             <div className="max-h-screen overflow-y-auto">
               <Outlet />
-              <img src={handRock} alt="" className="hidden md:flex md:bottom-0 md:right-0 md:absolute md:w-[150px] md:h-[30]"/>
+              <img src={handRock} alt="" className="hidden md:flex md:bottom-0 md:right-0 md:absolute md:w-[50px] md:h-[30]"/>
             </div>
             
           </div>

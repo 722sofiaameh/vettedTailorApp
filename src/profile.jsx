@@ -70,7 +70,7 @@ console.log(response);
   };
 
   return (
-    <div className="bg-white font-kotori box rounded-xl md:w-[80%]  w-[100%]  mx-auto md:mt-32 mt-32 md:mx-auto">
+    <div className="md:bg-white font-kotori shadow-xl rounded-xl md:w-[80%]  w-[100%]  mx-auto md:mt-32 mt-32 md:mx-auto">
       <div className="md:text-center md:pt-8 md:flex md:flex-col hidden">
         <h1 className="text-darkGray text-[24px] font-bold">
           Vetted Tailor Application
@@ -82,8 +82,8 @@ console.log(response);
         </p>
       </div>
       <div className="flex font-Karla flex-col md:flex-row  justify-around items-center pt-12 pb-14">
-        <div className="">
-          <div className="bg-white drop-shadow-xl mb-8	w-28 p-2 rounded-2xl">
+        <div className="z-20 bg-white p-8 md:p-0 drop-shadow-xl rounded-xl">
+          <div className=" drop-shadow-xl mb-8	w-28 p-2 rounded-2xl">
             <img src={mainImg} className="" />
           </div>
           <div className="w-[40%] flex flex-col justify-between">
@@ -137,8 +137,8 @@ console.log(response);
             </div>
           </div>
         </div>
-        <div className='my-32 md:my-0 p-2 md:bg-none md:drop-shadow-none bg-white rounded-xl'>
-          <div className="flex gap-6 ">
+        <div className='my-16 drop-shadow-xl md:my-0 p-2 md:bg-none md:drop-shadow-none bg-white rounded-xl'>
+          <div className="flex gap-6 rounded-xl">
             <div className="flex flex-col">
               <label className="text-Gray_">Gender You Sew For:</label>
               <select
