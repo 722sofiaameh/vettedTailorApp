@@ -1,6 +1,6 @@
 import React from 'react'
 import search from "../src/assets/images/Search.png";
-import more from "../src/assets/images/more.png";
+import more from "../src/assets/images/More.png";
 export default function Table() {
   return (
     <div>
