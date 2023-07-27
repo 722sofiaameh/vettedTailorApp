@@ -6,14 +6,13 @@ import edit from "../src/assets/images/editt.png";
 import search from "../src/assets/images/Search.png";
 import more from "../src/assets/images/More.png";
 import { NavLink, Link } from "react-router-dom";
+import Table from "./table";
 
 export default function TransactionHistory() {
   const navLinkStyle = ({ isActive }) => {
     return {
-      // color: isActive ? "#000" : "white",
-      // backgroundColor: isActive ? "white" : "",
-      // borderRadius: isActive ? "0px 50px 50px 0px" : "",
-      borderBottom: isActive ? "2px solid pink" : "",
+      color: isActive ? 'textGray' : '',
+      borderBottom: isActive ? '4px solid pink' : '',
     };
   };
   return (
@@ -28,7 +27,7 @@ export default function TransactionHistory() {
             <div className="bg-white drop-shadow-xl mb-14  left-4	w-24 p-4 rounded-2xl">
               <img src={mainImg} className="absolute  inset-x-0 bottom-0" />
             </div>
-            <div>
+            <div className="font-Karla">
               <h1 className="text-darkGray text-[18px] font-bold">
                 Samuel Oladokun
               </h1>
@@ -75,218 +74,25 @@ export default function TransactionHistory() {
           </div>
         </div>
       </div>
-      <div className=" md:w-[80%] bg-white mx-auto rounded-xl p-8">
-        <div className="flex justify-between items-center pt-2 pb-4">
-          <label className="relative block text-Gray_ mt-4 w-[60%]">
-            {/* <img src={search} alt="img" className="absolute pt-2 pl-2 " /> */}
-            <span className="sr-only">Search</span>
-  <span className="absolute inset-y-0 left-0 flex items-center pl-2">
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="search"><g data-name="Layer 2"><path d="m20.71 19.29-3.4-3.39A7.92 7.92 0 0 0 19 11a8 8 0 1 0-8 8 7.92 7.92 0 0 0 4.9-1.69l3.39 3.4a1 1 0 0 0 1.42 0 1 1 0 0 0 0-1.42zM5 11a6 6 0 1 1 6 6 6 6 0 0 1-6-6z" data-name="search"></path></g></svg>
-  </span>
-  
-            <input
-              className="placeholder:text-slate-400 block bg-white w-[100%] ml-10 border border-faintGray rounded-md py-2 pl-9 pr-3 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm "
-              placeholder="Search Order..."
-              type="text"
-              name="search"
-            />
-          </label>
-          <select
-            id="dropdown"
-            className="border-faintGray border-2  mt-1 bg-bgColor text-darkGray  h-8 rounded-lg pl-2"
-          >
-            <option className="text-Gray_">Actions</option>
-            <option>Male</option>
-            <option>Female</option>
-          </select>
-        </div>
-        <table className="table-auto rounded-xl md:w-[100%] text-darkGray ">
-          <thead className="mr-2 border-b-2 mb-2 mt-2 w-full border-gray pt-2">
-            <tr className="">
-              <th>
-                <input
-                  type="checkbox"
-                  name=""
-                  id=""
-                  className="ml-1 w-4 h-4 mt-4"
-                />
-              </th>
-              <th>
-                <select
-                  id="dropdown"
-                  className="border-faintGray border-2  mt-1 bg-bgColor text-darkGray w-[80%] rounded-lg pl-2 pt-2 pb-2 mb-4"
-                >
-                  <option className="text-Gray_">Transaction ID</option>
-                  <option>Male</option>
-                  <option>Female</option>
-                </select>
-              </th>
-              <th>
-                <select
-                  id="dropdown"
-                  className="border-faintGray border-2  mt-1 bg-bgColor text-darkGray w-[80%] rounded-lg pl-2 pt-2 pb-2 mb-4"
-                >
-                  <option className="text-Gray_">Transation Type</option>
-                  <option>Male</option>
-                  <option>Female</option>
-                </select>
-              </th>
-              <th>
-                <select
-                  id="dropdown"
-                  className="border-faintGray border-2  mt-1 bg-bgColor text-darkGray w-[80%] rounded-lg pl-2 pt-2 pb-2 mb-4"
-                >
-                  <option className="text-Gray_">Date</option>
-                  <option>Male</option>
-                  <option>Female</option>
-                </select>
-              </th>
-              <th>
-                <select
-                  id="dropdown"
-                  className="border-faintGray border-2  mt-1 bg-bgColor text-darkGray w-[80%] rounded-lg pl-2 pt-2 pb-2 mb-4"
-                >
-                  <option className="text-Gray_">Amount</option>
-                  <option>Male</option>
-                  <option>Female</option>
-                </select>
-              </th>
-              <th>
-                <select
-                  id="dropdown"
-                  className="border-faintGray border-2  mt-1 bg-bgColor text-darkGray w-[80%] rounded-lg pl-2 pt-2 pb-2 mb-4"
-                >
-                  <option className="text-Gray_">Payment</option>
-                  <option>Male</option>
-                  <option>Female</option>
-                </select>
-              </th>
-              <th>
-                <select
-                  id="dropdown"
-                  className="border-faintGray border-2  mt-1 bg-bgColor text-darkGray w-[100%] rounded-lg pl-2 pt-2 pb-2 mb-4"
-                >
-                  <option className="text-Gray_">Status</option>
-                  <option>Male</option>
-                  <option>Female</option>
-                </select>
-              </th>
-            </tr>
-          </thead>
-          <tbody className="">
-            <tr className="mr-2 border-b-2 mb-2 mt-2 w-full border-gray">
-              <td>
-                <input
-                  type="checkbox"
-                  name=""
-                  id=""
-                  className="ml-2 w-4 h-4"
-                />
-              </td>
-              <td className="text-center py-  ">#790841</td>
-              <td className="text-center py-">Receive Token</td>
-              <td className="text-center py-">12-Jun- 2021</td>
-              <td className="text-center py-">5 Tokens</td>
-              <td className="text-center py-">Token Wallet</td>
-              <td className="text-center py-4">
-                <a href="/"  className="bg-green-200 rounded-2xl text-center py-2 p-2 text-green-400 ">Successful</a>
-              </td>
-              <td><img src={more} alt="" /></td>
-            </tr>
-
-            <tr className="mr-2 border-b-2 mb-2 mt-2 w-full border-gray">
-              <td>
-                <input
-                  type="checkbox"
-                  name=""
-                  id=""
-                  className="ml-2 w-4 h-4"
-                />
-              </td>
-              <td className="text-center py-">#790841</td>
-              <td className="text-center py-">Transfer Token</td>
-              <td className="text-center py-">12-Jun- 2021</td>
-              <td className="text-center py-">20 Tokens</td>
-              <td className="text-center py-">Token Wallet</td>
-              <td className="text-center py-4">
-                <a href="/"  className="bg-green-200 rounded-2xl text-center py-2 p-2 text-green-400 ">Successful</a>
-              </td>
-              <td><img src={more} alt="" /></td>
-            </tr>
-            <tr className="mx-3">
-              <td>
-                <input
-                  type="checkbox"
-                  name=""
-                  id=""
-                  className="ml-2 w-4 h-4"
-                />
-              </td>
-              <td className="text-center py-4 ">#790841</td>
-              <td className="text-center py-4 ">Product Type</td>
-              <td className="text-center py-4 ">12-Jun- 2021</td>
-              <td className="text-center py-4 ">#30,000</td>
-              <td className="text-center py-4 ">Card Payment</td>
-              <td className="text-center py-4">
-                <a href="/"  className="bg-green-200 rounded-2xl text-center py-2 p-2 text-green-400 ">Successful</a>
-              </td>
-              <td><img src={more} alt="" /></td>
-            </tr>
-          </tbody>
-        </table>
-{/* 
-        <div className="flex justify-center px-4">
-                            <table
-                                className="text-[12px] text-left text-gray-500 dark:text-gray-400 mb-5 overflow-x-auto"
-                            >
-                                <thead className="text-[16px] text-black font-[600] bg-gray-50">
-                                    <tr>
-                                        <th scope="col" className="px-6" >
-                                            Name
-                                        </th>
-                                        <th scope="col" className="px-6" >
-                                            Email
-                                        </th>
-                                        <th scope="col" className="px-6" >
-                                            Phone
-                                        </th>
-                                        <th scope="col" className="px-6" >
-                                            Service
-                                        </th>
-                                        <th scope="col" className="px-6" >
-                                            Amount
-                                        </th>
-                                        <th scope="col" className="px-6" >
-                                            Ref No. 
-                                        </th>
-                                        <th scope="col" className="px-6" >
-                                            Date
-                                        </th>
-                                        <th scope="col" className="px-6" >
-                                            Status
-                                        </th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    
-                                        <tr className="text-black border-[2px]">
-                                            <td className="px-4"></td>
-                                            <td className="px-4"></td>
-                                            <td className="px-4"></td>
-                                            <td className="px-4 text-[10px]">
-                                                
-                                            </td>
-                                            <td className="px-4"></td>
-                                            <td className="px-4"></td>
-                                            <td className="px-4"></td>
-                                            <td className="px-4">  </td>
-                                        </tr>
-                                </tbody>
-                            </table>
-
-
-
-                        </div> */}
+      <div className="flex gap-20 items-center justify-center">
+        <NavLink style={navLinkStyle} 
+        to="/transaction_History/table"
+        className="font-Karla text-[24px] font-normal text-textGray">
+          <p>
+            Transaction History
+         
+          </p>
+        </NavLink>
+        <NavLink style={navLinkStyle} 
+        to="/billingAddress"
+        className="font-Karla text-[24px] font-normal text-textGray">
+        <p>Billing Address</p>
+        </NavLink>
+        <NavLink style={navLinkStyle} 
+        to='/accountSettings'
+        className="font-Karla text-[24px] font-normal text-textGray">
+        <p>Account Settings</p>
+        </NavLink>
       </div>
     </>
   );

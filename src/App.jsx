@@ -10,6 +10,8 @@ import Measurements from "./measurements";
 import LogOut from "./logOut";
 import Customers from "./customers";
 import Products from "./products";
+import Table from "./table";
+
 function App() {
   return (
     <>
@@ -18,11 +20,13 @@ function App() {
           <Route path="/" element={<Home />}>
             <Route path="/" element={<Profile />} />
             <Route path="/success" element={<Success />} />
-            <Route path="/transaction_History" element={<TransactionHistory />} />
+            <Route path="/transaction_History/table" element={<TransactionHistory />} />
+            <Route path="/transaction_History/table" element={<Table />} />
             <Route path="/measurements" element={<Measurements />} />
             <Route path="/logout" element={<LogOut />} />
             <Route path="customers" element={<Customers />} />
             <Route path="/products" element={<Products />} />
+
           </Route>
         </Routes>
       </BrowserRouter>

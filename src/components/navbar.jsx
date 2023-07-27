@@ -105,7 +105,7 @@ export default function Navbar() {
               </NavLink>
               <NavLink
                 style={navLinkStyle}
-                to="/transaction_History"
+                to="/transaction_History/table"
                 className="p-3  px-10 rounded-[8px] font-Karla "
                 
               >

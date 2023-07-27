@@ -2,7 +2,7 @@ import React from 'react'
 import success from '../src/assets/images/success.png'
 export default function Success() {
   return (
-    <div className="bg-white box rounded-xl md:w-[80%]  md:mx-auto mt-32 md:mt-32 p-10 w-[80%] mx-auto h-[60%]  ">
+    <div className="bg-white box rounded-xl md:w-[80%]  md:mx-auto mt-32 md:mt-32 p-10 w-[80%] mx-auto h-[60%] font-Karla ">
         <img src={success} className='mx-auto md:pt-0 pt-10'/>
         <div className='text-center pb-20 md:pb-10'>
             <h1 className=' text-darkGray font-bold text-[28px]'>Yay!!!🎉</h1>

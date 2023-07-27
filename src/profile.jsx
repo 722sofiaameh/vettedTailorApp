@@ -70,18 +70,18 @@ console.log(response);
   };
 
   return (
-    <div className="bg-white box rounded-xl md:w-[80%]  w-[100%]  mx-auto md:mt-32 mt-32 md:mx-auto">
+    <div className="bg-white font-kotori box rounded-xl md:w-[80%]  w-[100%]  mx-auto md:mt-32 mt-32 md:mx-auto">
       <div className="md:text-center md:pt-8 md:flex md:flex-col hidden">
         <h1 className="text-darkGray text-[24px] font-bold">
           Vetted Tailor Application
         </h1>
-        <p className="text-darkGray text-[14px] font-medium pt-2  leading-[20px] font-Karla-Regular">
+        <p className="text-darkGray text-[14px] font-medium pt-2  leading-[20px] font-Karla">
           One step closer to the goal! please provide us with your Bank details
           <br></br>
           with which you will be recieving payment..
         </p>
       </div>
-      <div className="flex flex-col md:flex-row  justify-around items-center pt-12 pb-14">
+      <div className="flex font-Karla flex-col md:flex-row  justify-around items-center pt-12 pb-14">
         <div className="">
           <div className="bg-white drop-shadow-xl mb-8	w-28 p-2 rounded-2xl">
             <img src={mainImg} className="" />
